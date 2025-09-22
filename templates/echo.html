@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Echo{% endblock %}
+{% block content %}
+<h2>Echo form (demo)</h2>
+<p>Server time: {{ server_time }}</p>
+<form method="post">
+  <input name="text" placeholder="Say something" />
+  <button type="submit">Submit</button>
+  <a href="{{ url_for('main.echo') }}">Reset</a>
+</form>
+{% endblock %}

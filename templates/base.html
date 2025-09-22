@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block title %}Flask Site{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  </head>
+  <body>
+    <header>
+      <h1>My Flask Site</h1>
+      <nav>
+        <a href="{{ url_for('main.index') }}">Home</a>
+        <a href="{{ url_for('main.greet', name='Ken') }}">Greet Ken</a>
+        <a href="{{ url_for('main.users') }}">Users</a>
+        <a href="{{ url_for('main.contact') }}">Contact</a>
+        <a href="{{ url_for('main.echo') }}">Echo</a>
+      </nav>
+      <hr />
+    </header>
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class="flashes">
+      {% for message in messages %}
+      <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
+    <main>{% block content %}{% endblock %}</main>
+
+    <footer>
+      <hr />
+      &copy; {{ current_year | default(2025) }}
+    </footer>
+  </body>
+</html>

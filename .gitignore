@@ -1,0 +1,100 @@
+# -------------------------------
+# Python / Flask essentials
+# -------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+config.py
+
+# Instance-specific config (secrets live here)
+instance/
+!instance/.gitkeep
+
+# Env files & secrets (keep only an example)
+.env
+.env.*
+!.env.example
+.flaskenv
+.flaskenv.*
+
+# Common secret/config patterns
+*.secret
+*.secrets
+secrets/
+*.local.py
+config.local.py
+settings.local.py
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+*.jks
+*.keystore
+
+# Databases & local storage
+*.sqlite
+*.sqlite3
+*.db
+*.db-*
+*.bak
+*.sql
+# If you store user uploads locally during dev:
+uploads/
+media/
+
+# Logs, runtime, coverage
+*.log
+logs/
+*.pid
+*.seed
+profile/
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.tox/
+.nox/
+
+# Type checkers / tooling
+.mypy_cache/
+.pyre/
+.pytype/
+.cache/
+ruff_cache/
+
+# Packaging / build
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Frontend artifacts (if you have a JS build in /static or /frontend)
+node_modules/
+*.tsbuildinfo
+static/build/
+static/dist/
+
+# Editors & OS
+.vscode/
+.idea/
+*.iml
+.ropeproject/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Docker / Compose (dev-only overrides)
+docker-compose.override.yml
+.env.docker
+.env.development

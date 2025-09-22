@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Greet{% endblock %}
+{% block content %}
+<h2>Hello, {{ name }}</h2>
+<p>This value came from the URL or a query parameter. It's auto-escaped by default.</p>
+<p>Unsafe example (do NOT do this): {{ name|safe }}</p>
+{% endblock %}

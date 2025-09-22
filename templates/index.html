@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h2>Welcome</h2>
+<p>Server time: {{ server_time }}</p>
+
+<form action="{{ url_for('main.greet') }}" method="get">
+  <label for="name">Enter your name:</label>
+  <input id="name" name="name" type="text" placeholder="Your name" />
+  <button type="submit">Greet</button>
+</form>
+
+<h3>Loop &amp; condition demo</h3>
+<ul>
+  {% for item in items %}
+  <li>
+    {{ loop.index }}. {{ item.name }} {% if item.featured %}<strong>(featured)</strong>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
