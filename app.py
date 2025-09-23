@@ -1,6 +1,7 @@
 from flask import Flask
 from config import Config
 from extension import db
+from model import Message
 
 
 

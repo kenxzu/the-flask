@@ -1,7 +1,3 @@
-
-
-
-
 from extension import db
 
 class Message(db.Model):
