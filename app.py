@@ -1,16 +1,8 @@
-from flask import Flask
-from config import Config
-from extension import db
-from model import Message
+"""WSGI entrypoint for the Flask application."""
+from the_flask import create_app
+
+app = create_app()
 
 
-
-
-app = Flask(__name__)
-app.config.from_object(Config)
-db.init_app(app)
-
-        
-from routes.main_routes import main
-
-app.register_blueprint(main)
+if __name__ == "__main__":
+    app.run()

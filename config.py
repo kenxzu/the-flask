@@ -1,6 +1,4 @@
-import os
+"""Compatibility wrapper for application configuration."""
+from the_flask.config import Config
 
-class Config:
-    SQLALCHEMY_DATABASE_URI = 'postgresql://username:password@localhost/flaskdb'
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
-    SECRET_KEY = os.environ.get('SECRET_KEY') or 'a-temporary-key-for-development'
+__all__ = ["Config"]
